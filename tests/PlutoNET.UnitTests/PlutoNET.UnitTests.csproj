@@ -21,4 +21,17 @@
       <ProjectReference Include="..\..\src\PlutoNET\PlutoNET.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Libs\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include = "..\..\libs\lua54.dll">
+            <Link>Libs\lua54.dll</Link>
+        </EmbeddedResource>
+        <EmbeddedResource Include = "..\..\libs\lua54.so">
+            <Link>Libs\lua54.so</Link>
+        </EmbeddedResource>
+    </ItemGroup>
+
 </Project>

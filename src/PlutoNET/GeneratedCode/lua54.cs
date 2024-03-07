@@ -18,43 +18,43 @@ namespace PlutoNET
     {
         public partial struct __Internal
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaopen_base", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaopen_base", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaopenBase(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaopen_coroutine", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaopen_coroutine", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaopenCoroutine(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaopen_table", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaopen_table", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaopenTable(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaopen_io", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaopen_io", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaopenIo(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaopen_os", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaopen_os", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaopenOs(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaopen_string", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaopen_string", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaopenString(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaopen_utf8", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaopen_utf8", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaopenUtf8(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaopen_math", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaopen_math", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaopenMath(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaopen_debug", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaopen_debug", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaopenDebug(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaopen_package", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaopen_package", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaopenPackage(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaopen_assert", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaopen_assert", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaopenAssert(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaopen_vector3", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaopen_vector3", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaopenVector3(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_openlibs", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_openlibs", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_openlibs(__IntPtr L);
         }
 
@@ -148,7 +148,7 @@ namespace PlutoNET
             {
                 get
                 {
-                    var __ptr = (global::PlutoNET.Pluto.PreloadedLibrary.__Internal*)global::PlutoNET.__Symbols.__Internal._preloaded_assert_Pluto__3UPreloadedLibrary_1_B;
+                    var __ptr = (global::PlutoNET.Pluto.PreloadedLibrary.__Internal*)global::PlutoNET.__Symbols.lua54._preloaded_assert_Pluto__3UPreloadedLibrary_1_B;
                     return global::PlutoNET.Pluto.PreloadedLibrary.__CreateInstance(new __IntPtr(__ptr));
                 }
             }
@@ -157,7 +157,7 @@ namespace PlutoNET
             {
                 get
                 {
-                    var __ptr = (global::PlutoNET.Pluto.PreloadedLibrary.__Internal*)global::PlutoNET.__Symbols.__Internal._preloaded_vector3_Pluto__3UPreloadedLibrary_1_B;
+                    var __ptr = (global::PlutoNET.Pluto.PreloadedLibrary.__Internal*)global::PlutoNET.__Symbols.lua54._preloaded_vector3_Pluto__3UPreloadedLibrary_1_B;
                     return global::PlutoNET.Pluto.PreloadedLibrary.__CreateInstance(new __IntPtr(__ptr));
                 }
             }
@@ -281,7 +281,7 @@ namespace PlutoNET
             internal fixed sbyte short_src[60];
             internal __IntPtr i_ci;
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "??0lua_Debug@@QEAA@AEBU0@@Z", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "??0lua_Debug@@QEAA@AEBU0@@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr cctor(__IntPtr __instance, __IntPtr _0);
         }
 
@@ -758,325 +758,325 @@ namespace PlutoNET
     {
         public partial struct __Internal
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_newstate", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_newstate", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaNewstate(__IntPtr f, __IntPtr ud);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_close", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_close", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaClose(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_newthread", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_newthread", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaNewthread(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_closethread", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_closethread", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaClosethread(__IntPtr L, __IntPtr from);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_resetthread", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_resetthread", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaResetthread(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_atpanic", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_atpanic", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaAtpanic(__IntPtr L, __IntPtr panicf);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_version", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_version", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern double LuaVersion(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_absindex", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_absindex", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaAbsindex(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_gettop", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_gettop", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaGettop(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_settop", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_settop", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaSettop(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_pushvalue", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_pushvalue", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaPushvalue(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_rotate", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_rotate", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaRotate(__IntPtr L, int idx, int n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_copy", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_copy", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaCopy(__IntPtr L, int fromidx, int toidx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_checkstack", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_checkstack", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaCheckstack(__IntPtr L, int n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_xmove", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_xmove", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaXmove(__IntPtr from, __IntPtr to, int n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_isnumber", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_isnumber", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaIsnumber(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_isstring", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_isstring", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaIsstring(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_iscfunction", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_iscfunction", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaIscfunction(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_isinteger", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_isinteger", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaIsinteger(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_istrue", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_istrue", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaIstrue(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_isuserdata", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_isuserdata", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaIsuserdata(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_type", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_type", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaType(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_typename", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_typename", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaTypename(__IntPtr L, int tp);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_tonumberx", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_tonumberx", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern double LuaTonumberx(__IntPtr L, int idx, int* isnum);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_tointegerx", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_tointegerx", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern long LuaTointegerx(__IntPtr L, int idx, int* isnum);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_toboolean", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_toboolean", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaToboolean(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_tolstring", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_tolstring", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaTolstring(__IntPtr L, int idx, ulong* len);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_rawlen", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_rawlen", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern ulong LuaRawlen(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_tocfunction", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_tocfunction", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaTocfunction(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_touserdata", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_touserdata", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaTouserdata(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_tothread", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_tothread", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaTothread(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_topointer", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_topointer", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaTopointer(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_arith", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_arith", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaArith(__IntPtr L, int op);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_rawequal", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_rawequal", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaRawequal(__IntPtr L, int idx1, int idx2);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_compare", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_compare", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaCompare(__IntPtr L, int idx1, int idx2, int op);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_pushnil", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_pushnil", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaPushnil(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_pushnumber", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_pushnumber", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaPushnumber(__IntPtr L, double n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_pushinteger", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_pushinteger", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaPushinteger(__IntPtr L, long n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_pushlstring", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_pushlstring", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaPushlstring(__IntPtr L, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string s, ulong len);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_pushstring", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_pushstring", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaPushstring(__IntPtr L, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string s);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "?pluto_pushstring@@YAPEBDPEAUlua_State@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "?pluto_pushstring@@YAPEBDPEAUlua_State@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr PlutoPushstring(__IntPtr L, __IntPtr str);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_pushfstring", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_pushfstring", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaPushfstring(__IntPtr L, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_pushcclosure", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_pushcclosure", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaPushcclosure(__IntPtr L, __IntPtr fn, int n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_pushboolean", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_pushboolean", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaPushboolean(__IntPtr L, int b);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_pushlightuserdata", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_pushlightuserdata", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaPushlightuserdata(__IntPtr L, __IntPtr p);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_pushthread", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_pushthread", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaPushthread(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_getglobal", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_getglobal", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaGetglobal(__IntPtr L, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string name);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_gettable", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_gettable", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaGettable(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_getfield", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_getfield", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaGetfield(__IntPtr L, int idx, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string k);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_geti", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_geti", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaGeti(__IntPtr L, int idx, long n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_rawget", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_rawget", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaRawget(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_rawgeti", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_rawgeti", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaRawgeti(__IntPtr L, int idx, long n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_rawgetp", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_rawgetp", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaRawgetp(__IntPtr L, int idx, __IntPtr p);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_createtable", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_createtable", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaCreatetable(__IntPtr L, int narr, int nrec);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_newuserdatauv", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_newuserdatauv", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaNewuserdatauv(__IntPtr L, ulong sz, int nuvalue);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_getmetatable", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_getmetatable", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaGetmetatable(__IntPtr L, int objindex);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_getiuservalue", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_getiuservalue", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaGetiuservalue(__IntPtr L, int idx, int n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_setglobal", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_setglobal", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaSetglobal(__IntPtr L, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string name);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_settable", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_settable", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaSettable(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_setfield", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_setfield", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaSetfield(__IntPtr L, int idx, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string k);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_seti", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_seti", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaSeti(__IntPtr L, int idx, long n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_rawset", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_rawset", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaRawset(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_rawseti", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_rawseti", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaRawseti(__IntPtr L, int idx, long n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_rawsetp", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_rawsetp", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaRawsetp(__IntPtr L, int idx, __IntPtr p);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_setmetatable", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_setmetatable", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaSetmetatable(__IntPtr L, int objindex);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_setiuservalue", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_setiuservalue", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaSetiuservalue(__IntPtr L, int idx, int n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_setcachelen", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_setcachelen", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaSetcachelen(__IntPtr L, ulong len, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_freezetable", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_freezetable", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaFreezetable(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_istablefrozen", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_istablefrozen", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaIstablefrozen(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_erriffrozen", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_erriffrozen", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaErriffrozen(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_callk", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_callk", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaCallk(__IntPtr L, int nargs, int nresults, long ctx, __IntPtr k);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_pcallk", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_pcallk", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaPcallk(__IntPtr L, int nargs, int nresults, int errfunc, long ctx, __IntPtr k);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_load", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_load", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaLoad(__IntPtr L, __IntPtr reader, __IntPtr dt, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string chunkname, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string mode);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_dump", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_dump", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaDump(__IntPtr L, __IntPtr writer, __IntPtr data, int strip);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_yieldk", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_yieldk", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaYieldk(__IntPtr L, int nresults, long ctx, __IntPtr k);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_resume", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_resume", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaResume(__IntPtr L, __IntPtr from, int narg, int* nres);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_status", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_status", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaStatus(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_isyieldable", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_isyieldable", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaIsyieldable(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_setwarnf", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_setwarnf", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaSetwarnf(__IntPtr L, __IntPtr f, __IntPtr ud);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_warning", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_warning", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaWarning(__IntPtr L, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string msg, int tocont);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "?pluto_warning@@YAXPEAUlua_State@@PEBD@Z", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "?pluto_warning@@YAXPEAUlua_State@@PEBD@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void PlutoWarning(__IntPtr L, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string msg);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_gc", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_gc", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaGc(__IntPtr L, int what);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_error", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_error", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaError(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_next", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_next", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaNext(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_concat", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_concat", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaConcat(__IntPtr L, int n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_len", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_len", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaLen(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_stringtonumber", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_stringtonumber", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern ulong LuaStringtonumber(__IntPtr L, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string s);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_getallocf", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_getallocf", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaGetallocf(__IntPtr L, __IntPtr* ud);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_setallocf", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_setallocf", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaSetallocf(__IntPtr L, __IntPtr f, __IntPtr ud);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_toclose", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_toclose", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaToclose(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_closeslot", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_closeslot", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaCloseslot(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_insert", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_insert", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaInsert(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_remove", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_remove", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaRemove(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_replace", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_replace", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaReplace(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_getstack", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_getstack", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaGetstack(__IntPtr L, int level, __IntPtr ar);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_getinfo", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_getinfo", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaGetinfo(__IntPtr L, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string what, __IntPtr ar);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_getlocal", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_getlocal", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaGetlocal(__IntPtr L, __IntPtr ar, int n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_setlocal", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_setlocal", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaSetlocal(__IntPtr L, __IntPtr ar, int n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_getupvalue", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_getupvalue", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaGetupvalue(__IntPtr L, int funcindex, int n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_setupvalue", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_setupvalue", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaSetupvalue(__IntPtr L, int funcindex, int n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_upvalueid", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_upvalueid", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaUpvalueid(__IntPtr L, int fidx, int n);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_upvaluejoin", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_upvaluejoin", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaUpvaluejoin(__IntPtr L, int fidx1, int n1, int fidx2, int n2);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_sethook", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_sethook", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaSethook(__IntPtr L, __IntPtr func, int mask, int count);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_gethook", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_gethook", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaGethook(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_gethookmask", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_gethookmask", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaGethookmask(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_gethookcount", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_gethookcount", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaGethookcount(__IntPtr L);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "lua_setcstacklimit", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_setcstacklimit", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaSetcstacklimit(__IntPtr L, uint limit);
         }
 
@@ -1727,7 +1727,7 @@ namespace PlutoNET
         {
             get
             {
-                var __ptr = global::PlutoNET.__Symbols.__Internal._lua_ident__3QBDB;
+                var __ptr = global::PlutoNET.__Symbols.lua54._lua_ident__3QBDB;
                 return CppSharp.Runtime.MarshalUtil.GetString(global::System.Text.Encoding.UTF8, __ptr);
             }
         }
@@ -1741,7 +1741,7 @@ namespace PlutoNET
             internal __IntPtr name;
             internal __IntPtr func;
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "??0luaL_Reg@@QEAA@AEBU0@@Z", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "??0luaL_Reg@@QEAA@AEBU0@@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr cctor(__IntPtr __instance, __IntPtr _0);
         }
 
@@ -1904,7 +1904,7 @@ namespace PlutoNET
             internal __IntPtr L;
             internal global::PlutoNET.LuaL_Buffer.Init.__Internal init;
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "??0luaL_Buffer@@QEAA@AEBU0@@Z", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "??0luaL_Buffer@@QEAA@AEBU0@@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr cctor(__IntPtr __instance, __IntPtr _0);
         }
 
@@ -1931,7 +1931,7 @@ namespace PlutoNET
                 [FieldOffset(0)]
                 internal fixed sbyte b[1024];
 
-                [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "??0<unnamed-type-init>@luaL_Buffer@@QEAA@AEBT01@@Z", CallingConvention = __CallingConvention.Cdecl)]
+                [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "??0<unnamed-type-init>@luaL_Buffer@@QEAA@AEBT01@@Z", CallingConvention = __CallingConvention.Cdecl)]
                 internal static extern __IntPtr cctor(__IntPtr __instance, __IntPtr _0);
             }
 
@@ -2236,7 +2236,7 @@ namespace PlutoNET
             internal __IntPtr f;
             internal __IntPtr closef;
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "??0luaL_Stream@@QEAA@AEBU0@@Z", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "??0luaL_Stream@@QEAA@AEBU0@@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr cctor(__IntPtr __instance, __IntPtr _0);
         }
 
@@ -2375,151 +2375,151 @@ namespace PlutoNET
     {
         public partial struct __Internal
         {
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_checkversion_", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_checkversion_", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_checkversion(__IntPtr L, double ver, ulong sz);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_getmetafield", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_getmetafield", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaL_getmetafield(__IntPtr L, int obj, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string e);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_callmeta", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_callmeta", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaL_callmeta(__IntPtr L, int obj, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string e);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_tolstring", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_tolstring", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaL_tolstring(__IntPtr L, int idx, ulong* len);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_argerror", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_argerror", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaL_argerror(__IntPtr L, int arg, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string extramsg);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_typeerror", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_typeerror", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaL_typeerror(__IntPtr L, int arg, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string tname);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_checklstring", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_checklstring", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaL_checklstring(__IntPtr L, int arg, ulong* l);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_optlstring", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_optlstring", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaL_optlstring(__IntPtr L, int arg, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string def, ulong* l);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "?pluto_checkstring@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUlua_State@@H@Z", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "?pluto_checkstring@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUlua_State@@H@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern global::Std.BasicString.__Internalc__N_std_S_basic_string__C___N_std_S_char_traits__C___N_std_S_allocator__C PlutoCheckstring(__IntPtr L, int arg);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "?pluto_optstring@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUlua_State@@HV12@@Z", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "?pluto_optstring@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAUlua_State@@HV12@@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern global::Std.BasicString.__Internalc__N_std_S_basic_string__C___N_std_S_char_traits__C___N_std_S_allocator__C PlutoOptstring(__IntPtr L, int arg, global::Std.BasicString.__Internalc__N_std_S_basic_string__C___N_std_S_char_traits__C___N_std_S_allocator__C def);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_checknumber", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_checknumber", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern double LuaL_checknumber(__IntPtr L, int arg);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_optnumber", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_optnumber", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern double LuaL_optnumber(__IntPtr L, int arg, double def);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_checkinteger", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_checkinteger", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern long LuaL_checkinteger(__IntPtr L, int arg);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_optinteger", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_optinteger", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern long LuaL_optinteger(__IntPtr L, int arg, long def);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_checkstack", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_checkstack", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_checkstack(__IntPtr L, int sz, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string msg);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_checktype", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_checktype", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_checktype(__IntPtr L, int arg, int t);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_checkany", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_checkany", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_checkany(__IntPtr L, int arg);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_newmetatable", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_newmetatable", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaL_newmetatable(__IntPtr L, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string tname);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_setmetatable", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_setmetatable", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_setmetatable(__IntPtr L, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string tname);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_testudata", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_testudata", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaL_testudata(__IntPtr L, int ud, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string tname);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_checkudata", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_checkudata", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaL_checkudata(__IntPtr L, int ud, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string tname);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_where", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_where", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_where(__IntPtr L, int lvl);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_error", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_error", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaL_error(__IntPtr L, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fmt);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_checkoption", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_checkoption", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaL_checkoption(__IntPtr L, int arg, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string def, [MarshalAs(UnmanagedType.LPArray)] string[] lst);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_fileresult", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_fileresult", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaL_fileresult(__IntPtr L, int stat, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fname);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_execresult", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_execresult", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaL_execresult(__IntPtr L, int stat);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_ref", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_ref", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaL_ref(__IntPtr L, int t);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_unref", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_unref", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_unref(__IntPtr L, int t, int @ref);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "?luaL_utf16_to_utf8@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEB_W_K@Z", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "?luaL_utf16_to_utf8@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEB_W_K@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_utf16ToUtf8(__IntPtr @return, [MarshalAs(UnmanagedType.LPWStr)] string utf16, ulong utf16_len);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_fopen", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_fopen", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaL_fopen([MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string filename, ulong filename_len, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string mode, ulong mode_len);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_loadfilex", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_loadfilex", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaL_loadfilex(__IntPtr L, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string filename, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string mode);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_loadbufferx", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_loadbufferx", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaL_loadbufferx(__IntPtr L, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string buff, ulong sz, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string name, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string mode);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_loadstring", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_loadstring", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaL_loadstring(__IntPtr L, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string s);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_newstate", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_newstate", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaL_newstate();
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_len", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_len", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern long LuaL_len(__IntPtr L, int idx);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_addgsub", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_addgsub", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_addgsub(__IntPtr b, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string s, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string p, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string r);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_gsub", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_gsub", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaL_gsub(__IntPtr L, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string s, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string p, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string r);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_setfuncs", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_setfuncs", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_setfuncs(__IntPtr L, __IntPtr l, int nup);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_getsubtable", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_getsubtable", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaL_getsubtable(__IntPtr L, int idx, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string fname);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_traceback", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_traceback", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_traceback(__IntPtr L, __IntPtr L1, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string msg, int level);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_requiref", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_requiref", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_requiref(__IntPtr L, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string modname, __IntPtr openf, int glb);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_buffinit", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_buffinit", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_buffinit(__IntPtr L, __IntPtr B);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_prepbuffsize", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_prepbuffsize", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern sbyte* LuaL_prepbuffsize(__IntPtr B, ulong sz);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_addlstring", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_addlstring", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_addlstring(__IntPtr B, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string s, ulong l);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_addstring", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_addstring", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_addstring(__IntPtr B, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string s);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_addvalue", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_addvalue", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_addvalue(__IntPtr B);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_pushresult", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_pushresult", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_pushresult(__IntPtr B);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_pushresultsize", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_pushresultsize", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_pushresultsize(__IntPtr B, ulong sz);
 
-            [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "luaL_buffinitsize", CallingConvention = __CallingConvention.Cdecl)]
+            [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_buffinitsize", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern sbyte* LuaL_buffinitsize(__IntPtr L, __IntPtr B, ulong sz);
         }
 
@@ -2849,10 +2849,10 @@ namespace PlutoNET
                 internal __IntPtr funcs;
                 internal __IntPtr init;
 
-                [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "??0PreloadedLibrary@Pluto@@QEAA@PEBDPEBUluaL_Reg@@P6AHPEAUlua_State@@@Z@Z", CallingConvention = __CallingConvention.Cdecl)]
+                [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "??0PreloadedLibrary@Pluto@@QEAA@PEBDPEBUluaL_Reg@@P6AHPEAUlua_State@@@Z@Z", CallingConvention = __CallingConvention.Cdecl)]
                 internal static extern __IntPtr ctor(__IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string name, __IntPtr funcs, __IntPtr init);
 
-                [SuppressUnmanagedCodeSecurity, DllImport("__Internal", EntryPoint = "??0PreloadedLibrary@Pluto@@QEAA@AEBU01@@Z", CallingConvention = __CallingConvention.Cdecl)]
+                [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "??0PreloadedLibrary@Pluto@@QEAA@AEBU01@@Z", CallingConvention = __CallingConvention.Cdecl)]
                 internal static extern __IntPtr cctor(__IntPtr __instance, __IntPtr _0);
             }
 
@@ -3014,14 +3014,14 @@ namespace PlutoNET
 }
 namespace PlutoNET.__Symbols
 {
-    internal class __Internal
+    internal class lua54
     {
         public static IntPtr _preloaded_assert_Pluto__3UPreloadedLibrary_1_B { get; }
         public static IntPtr _preloaded_vector3_Pluto__3UPreloadedLibrary_1_B { get; }
         public static IntPtr _lua_ident__3QBDB { get; }
-        static __Internal()
+        static lua54()
         {
-            var path = "__Internal";
+            var path = "lua54";
             var image = CppSharp.SymbolResolver.LoadImage(ref path);
             if (image == IntPtr.Zero) throw new global::System.DllNotFoundException(path);
             _preloaded_assert_Pluto__3UPreloadedLibrary_1_B = CppSharp.SymbolResolver.ResolveSymbol(image, "?preloaded_assert@Pluto@@3UPreloadedLibrary@1@B");

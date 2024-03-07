@@ -9,18 +9,15 @@ namespace PlutoNET;
 public class Lua : IDisposable
 {
     /* Native Lua State */
-    private IntPtr State { get; set; }
+    public IntPtr State { get; set; }
     
 
     /// <summary>
     /// Creates a new Lua state
     /// </summary>
-    /// <param name="openLibs">if set to true it will open all libs</param>
-    public Lua(bool openLibs = true)
+    public Lua()
     {
         State = LuaL_newstate();
-        if (openLibs)
-            OpenLibs();
     }
 
     /// <summary>

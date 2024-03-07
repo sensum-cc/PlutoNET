@@ -19,11 +19,12 @@ public class CodeGen : ILibrary
         driver.ParserOptions.LanguageVersion = LanguageVersion.CPP17;
 
         var options = driver.Options;
+        options.GenerateDefaultValuesForArguments = true;
         options.GeneratorKind = GeneratorKind.CSharp;
+        options.GenerateSequentialLayout = true;
         options.GenerateFinalizers = true;
         options.Verbose = true;
-        options.GenerateInternalImports = true;
-        options.GenerateDefaultValuesForArguments = true;
+        
         
 
         var module = options.AddModule(LIBRARY_NAME);
