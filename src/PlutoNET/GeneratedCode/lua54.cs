@@ -195,6 +195,21 @@ namespace PlutoNET
 
         public __IntPtr __Instance { get; protected set; }
 
+        internal static readonly new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::PlutoNET.LuaState>> NativeToManagedMap =
+            new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::PlutoNET.LuaState>>();
+
+        internal static void __RecordNativeToManagedMapping(IntPtr native, global::PlutoNET.LuaState managed)
+        {
+            NativeToManagedMap[native] = new global::System.WeakReference<global::PlutoNET.LuaState>(managed);
+        }
+
+        internal static bool __TryGetNativeToManagedMapping(IntPtr native, out global::PlutoNET.LuaState managed)
+        {
+    
+            managed = default;
+            return NativeToManagedMap.TryGetValue(native, out var wr) && wr.TryGetTarget(out managed);
+        }
+
         protected bool __ownsNativeInstance;
 
         internal static LuaState __CreateInstance(__IntPtr native, bool skipVTables = false)
@@ -202,6 +217,18 @@ namespace PlutoNET
             if (native == __IntPtr.Zero)
                 return null;
             return new LuaState(native.ToPointer(), skipVTables);
+        }
+
+        internal static LuaState __GetOrCreateInstance(__IntPtr native, bool saveInstance = false, bool skipVTables = false)
+        {
+            if (native == __IntPtr.Zero)
+                return null;
+            if (__TryGetNativeToManagedMapping(native, out var managed))
+                return (LuaState)managed;
+            var result = __CreateInstance(native, skipVTables);
+            if (saveInstance)
+                __RecordNativeToManagedMapping(native, result);
+            return result;
         }
 
         internal static LuaState __CreateInstance(__Internal native, bool skipVTables = false)
@@ -220,6 +247,7 @@ namespace PlutoNET
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
+            __RecordNativeToManagedMapping(__Instance, this);
         }
 
         protected LuaState(void* native, bool skipVTables = false)
@@ -259,6 +287,21 @@ namespace PlutoNET
 
         public __IntPtr __Instance { get; protected set; }
 
+        internal static readonly new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::PlutoNET.LuaDebug>> NativeToManagedMap =
+            new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::PlutoNET.LuaDebug>>();
+
+        internal static void __RecordNativeToManagedMapping(IntPtr native, global::PlutoNET.LuaDebug managed)
+        {
+            NativeToManagedMap[native] = new global::System.WeakReference<global::PlutoNET.LuaDebug>(managed);
+        }
+
+        internal static bool __TryGetNativeToManagedMapping(IntPtr native, out global::PlutoNET.LuaDebug managed)
+        {
+    
+            managed = default;
+            return NativeToManagedMap.TryGetValue(native, out var wr) && wr.TryGetTarget(out managed);
+        }
+
         private bool __name_OwnsNativeMemory = false;
         private bool __namewhat_OwnsNativeMemory = false;
         private bool __what_OwnsNativeMemory = false;
@@ -270,6 +313,18 @@ namespace PlutoNET
             if (native == __IntPtr.Zero)
                 return null;
             return new LuaDebug(native.ToPointer(), skipVTables);
+        }
+
+        internal static LuaDebug __GetOrCreateInstance(__IntPtr native, bool saveInstance = false, bool skipVTables = false)
+        {
+            if (native == __IntPtr.Zero)
+                return null;
+            if (__TryGetNativeToManagedMapping(native, out var managed))
+                return (LuaDebug)managed;
+            var result = __CreateInstance(native, skipVTables);
+            if (saveInstance)
+                __RecordNativeToManagedMapping(native, result);
+            return result;
         }
 
         internal static LuaDebug __CreateInstance(__Internal native, bool skipVTables = false)
@@ -288,6 +343,7 @@ namespace PlutoNET
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
+            __RecordNativeToManagedMapping(__Instance, this);
         }
 
         protected LuaDebug(void* native, bool skipVTables = false)
@@ -299,18 +355,16 @@ namespace PlutoNET
 
         public LuaDebug()
         {
-            if (GetType().FullName != "PlutoNET.LuaDebug")
-                throw new Exception("PlutoNET.LuaDebug: Can't inherit from classes with disabled NativeToManaged map");
             __Instance = Marshal.AllocHGlobal(sizeof(global::PlutoNET.LuaDebug.__Internal));
             __ownsNativeInstance = true;
+            __RecordNativeToManagedMapping(__Instance, this);
         }
 
         public LuaDebug(global::PlutoNET.LuaDebug _0)
         {
-            if (GetType().FullName != "PlutoNET.LuaDebug")
-                throw new Exception("PlutoNET.LuaDebug: Can't inherit from classes with disabled NativeToManaged map");
             __Instance = Marshal.AllocHGlobal(sizeof(global::PlutoNET.LuaDebug.__Internal));
             __ownsNativeInstance = true;
+            __RecordNativeToManagedMapping(__Instance, this);
             *((global::PlutoNET.LuaDebug.__Internal*) __Instance) = *((global::PlutoNET.LuaDebug.__Internal*) _0.__Instance);
             if (_0.__name_OwnsNativeMemory)
                 this.Name = _0.Name;
@@ -339,6 +393,7 @@ namespace PlutoNET
         {
             if (__Instance == IntPtr.Zero)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, out _);
             DisposePartial(disposing);
             if (__name_OwnsNativeMemory)
                 Marshal.FreeHGlobal(((__Internal*)__Instance)->name);
@@ -617,7 +672,7 @@ namespace PlutoNET
         {
             get
             {
-                var __result0 = global::PlutoNET.CallInfo.__CreateInstance(((__Internal*)__Instance)->i_ci, false);
+                var __result0 = global::PlutoNET.CallInfo.__GetOrCreateInstance(((__Internal*)__Instance)->i_ci, false);
                 return __result0;
             }
 
@@ -636,6 +691,21 @@ namespace PlutoNET
 
         public __IntPtr __Instance { get; protected set; }
 
+        internal static readonly new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::PlutoNET.CallInfo>> NativeToManagedMap =
+            new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::PlutoNET.CallInfo>>();
+
+        internal static void __RecordNativeToManagedMapping(IntPtr native, global::PlutoNET.CallInfo managed)
+        {
+            NativeToManagedMap[native] = new global::System.WeakReference<global::PlutoNET.CallInfo>(managed);
+        }
+
+        internal static bool __TryGetNativeToManagedMapping(IntPtr native, out global::PlutoNET.CallInfo managed)
+        {
+    
+            managed = default;
+            return NativeToManagedMap.TryGetValue(native, out var wr) && wr.TryGetTarget(out managed);
+        }
+
         protected bool __ownsNativeInstance;
 
         internal static CallInfo __CreateInstance(__IntPtr native, bool skipVTables = false)
@@ -643,6 +713,18 @@ namespace PlutoNET
             if (native == __IntPtr.Zero)
                 return null;
             return new CallInfo(native.ToPointer(), skipVTables);
+        }
+
+        internal static CallInfo __GetOrCreateInstance(__IntPtr native, bool saveInstance = false, bool skipVTables = false)
+        {
+            if (native == __IntPtr.Zero)
+                return null;
+            if (__TryGetNativeToManagedMapping(native, out var managed))
+                return (CallInfo)managed;
+            var result = __CreateInstance(native, skipVTables);
+            if (saveInstance)
+                __RecordNativeToManagedMapping(native, result);
+            return result;
         }
 
         internal static CallInfo __CreateInstance(__Internal native, bool skipVTables = false)
@@ -661,6 +743,7 @@ namespace PlutoNET
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
+            __RecordNativeToManagedMapping(__Instance, this);
         }
 
         protected CallInfo(void* native, bool skipVTables = false)
@@ -1664,6 +1747,21 @@ namespace PlutoNET
 
         public __IntPtr __Instance { get; protected set; }
 
+        internal static readonly new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::PlutoNET.LuaL_Reg>> NativeToManagedMap =
+            new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::PlutoNET.LuaL_Reg>>();
+
+        internal static void __RecordNativeToManagedMapping(IntPtr native, global::PlutoNET.LuaL_Reg managed)
+        {
+            NativeToManagedMap[native] = new global::System.WeakReference<global::PlutoNET.LuaL_Reg>(managed);
+        }
+
+        internal static bool __TryGetNativeToManagedMapping(IntPtr native, out global::PlutoNET.LuaL_Reg managed)
+        {
+    
+            managed = default;
+            return NativeToManagedMap.TryGetValue(native, out var wr) && wr.TryGetTarget(out managed);
+        }
+
         private bool __name_OwnsNativeMemory = false;
         protected bool __ownsNativeInstance;
 
@@ -1672,6 +1770,18 @@ namespace PlutoNET
             if (native == __IntPtr.Zero)
                 return null;
             return new LuaL_Reg(native.ToPointer(), skipVTables);
+        }
+
+        internal static LuaL_Reg __GetOrCreateInstance(__IntPtr native, bool saveInstance = false, bool skipVTables = false)
+        {
+            if (native == __IntPtr.Zero)
+                return null;
+            if (__TryGetNativeToManagedMapping(native, out var managed))
+                return (LuaL_Reg)managed;
+            var result = __CreateInstance(native, skipVTables);
+            if (saveInstance)
+                __RecordNativeToManagedMapping(native, result);
+            return result;
         }
 
         internal static LuaL_Reg __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1690,6 +1800,7 @@ namespace PlutoNET
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
+            __RecordNativeToManagedMapping(__Instance, this);
         }
 
         protected LuaL_Reg(void* native, bool skipVTables = false)
@@ -1701,18 +1812,16 @@ namespace PlutoNET
 
         public LuaL_Reg()
         {
-            if (GetType().FullName != "PlutoNET.LuaL_Reg")
-                throw new Exception("PlutoNET.LuaL_Reg: Can't inherit from classes with disabled NativeToManaged map");
             __Instance = Marshal.AllocHGlobal(sizeof(global::PlutoNET.LuaL_Reg.__Internal));
             __ownsNativeInstance = true;
+            __RecordNativeToManagedMapping(__Instance, this);
         }
 
         public LuaL_Reg(global::PlutoNET.LuaL_Reg _0)
         {
-            if (GetType().FullName != "PlutoNET.LuaL_Reg")
-                throw new Exception("PlutoNET.LuaL_Reg: Can't inherit from classes with disabled NativeToManaged map");
             __Instance = Marshal.AllocHGlobal(sizeof(global::PlutoNET.LuaL_Reg.__Internal));
             __ownsNativeInstance = true;
+            __RecordNativeToManagedMapping(__Instance, this);
             *((global::PlutoNET.LuaL_Reg.__Internal*) __Instance) = *((global::PlutoNET.LuaL_Reg.__Internal*) _0.__Instance);
             if (_0.__name_OwnsNativeMemory)
                 this.Name = _0.Name;
@@ -1735,6 +1844,7 @@ namespace PlutoNET
         {
             if (__Instance == IntPtr.Zero)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, out _);
             DisposePartial(disposing);
             if (__name_OwnsNativeMemory)
                 Marshal.FreeHGlobal(((__Internal*)__Instance)->name);
@@ -1951,6 +2061,21 @@ namespace PlutoNET
 
         public __IntPtr __Instance { get; protected set; }
 
+        internal static readonly new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::PlutoNET.LuaL_Buffer>> NativeToManagedMap =
+            new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::PlutoNET.LuaL_Buffer>>();
+
+        internal static void __RecordNativeToManagedMapping(IntPtr native, global::PlutoNET.LuaL_Buffer managed)
+        {
+            NativeToManagedMap[native] = new global::System.WeakReference<global::PlutoNET.LuaL_Buffer>(managed);
+        }
+
+        internal static bool __TryGetNativeToManagedMapping(IntPtr native, out global::PlutoNET.LuaL_Buffer managed)
+        {
+    
+            managed = default;
+            return NativeToManagedMap.TryGetValue(native, out var wr) && wr.TryGetTarget(out managed);
+        }
+
         protected bool __ownsNativeInstance;
 
         internal static LuaL_Buffer __CreateInstance(__IntPtr native, bool skipVTables = false)
@@ -1958,6 +2083,18 @@ namespace PlutoNET
             if (native == __IntPtr.Zero)
                 return null;
             return new LuaL_Buffer(native.ToPointer(), skipVTables);
+        }
+
+        internal static LuaL_Buffer __GetOrCreateInstance(__IntPtr native, bool saveInstance = false, bool skipVTables = false)
+        {
+            if (native == __IntPtr.Zero)
+                return null;
+            if (__TryGetNativeToManagedMapping(native, out var managed))
+                return (LuaL_Buffer)managed;
+            var result = __CreateInstance(native, skipVTables);
+            if (saveInstance)
+                __RecordNativeToManagedMapping(native, result);
+            return result;
         }
 
         internal static LuaL_Buffer __CreateInstance(__Internal native, bool skipVTables = false)
@@ -1976,6 +2113,7 @@ namespace PlutoNET
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
+            __RecordNativeToManagedMapping(__Instance, this);
         }
 
         protected LuaL_Buffer(void* native, bool skipVTables = false)
@@ -1987,18 +2125,16 @@ namespace PlutoNET
 
         public LuaL_Buffer()
         {
-            if (GetType().FullName != "PlutoNET.LuaL_Buffer")
-                throw new Exception("PlutoNET.LuaL_Buffer: Can't inherit from classes with disabled NativeToManaged map");
             __Instance = Marshal.AllocHGlobal(sizeof(global::PlutoNET.LuaL_Buffer.__Internal));
             __ownsNativeInstance = true;
+            __RecordNativeToManagedMapping(__Instance, this);
         }
 
         public LuaL_Buffer(global::PlutoNET.LuaL_Buffer _0)
         {
-            if (GetType().FullName != "PlutoNET.LuaL_Buffer")
-                throw new Exception("PlutoNET.LuaL_Buffer: Can't inherit from classes with disabled NativeToManaged map");
             __Instance = Marshal.AllocHGlobal(sizeof(global::PlutoNET.LuaL_Buffer.__Internal));
             __ownsNativeInstance = true;
+            __RecordNativeToManagedMapping(__Instance, this);
             *((global::PlutoNET.LuaL_Buffer.__Internal*) __Instance) = *((global::PlutoNET.LuaL_Buffer.__Internal*) _0.__Instance);
         }
 
@@ -2019,6 +2155,7 @@ namespace PlutoNET
         {
             if (__Instance == IntPtr.Zero)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, out _);
             DisposePartial(disposing);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -2105,6 +2242,21 @@ namespace PlutoNET
 
         public __IntPtr __Instance { get; protected set; }
 
+        internal static readonly new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::PlutoNET.LuaL_Stream>> NativeToManagedMap =
+            new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::PlutoNET.LuaL_Stream>>();
+
+        internal static void __RecordNativeToManagedMapping(IntPtr native, global::PlutoNET.LuaL_Stream managed)
+        {
+            NativeToManagedMap[native] = new global::System.WeakReference<global::PlutoNET.LuaL_Stream>(managed);
+        }
+
+        internal static bool __TryGetNativeToManagedMapping(IntPtr native, out global::PlutoNET.LuaL_Stream managed)
+        {
+    
+            managed = default;
+            return NativeToManagedMap.TryGetValue(native, out var wr) && wr.TryGetTarget(out managed);
+        }
+
         protected bool __ownsNativeInstance;
 
         internal static LuaL_Stream __CreateInstance(__IntPtr native, bool skipVTables = false)
@@ -2112,6 +2264,18 @@ namespace PlutoNET
             if (native == __IntPtr.Zero)
                 return null;
             return new LuaL_Stream(native.ToPointer(), skipVTables);
+        }
+
+        internal static LuaL_Stream __GetOrCreateInstance(__IntPtr native, bool saveInstance = false, bool skipVTables = false)
+        {
+            if (native == __IntPtr.Zero)
+                return null;
+            if (__TryGetNativeToManagedMapping(native, out var managed))
+                return (LuaL_Stream)managed;
+            var result = __CreateInstance(native, skipVTables);
+            if (saveInstance)
+                __RecordNativeToManagedMapping(native, result);
+            return result;
         }
 
         internal static LuaL_Stream __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2130,6 +2294,7 @@ namespace PlutoNET
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
+            __RecordNativeToManagedMapping(__Instance, this);
         }
 
         protected LuaL_Stream(void* native, bool skipVTables = false)
@@ -2141,18 +2306,16 @@ namespace PlutoNET
 
         public LuaL_Stream()
         {
-            if (GetType().FullName != "PlutoNET.LuaL_Stream")
-                throw new Exception("PlutoNET.LuaL_Stream: Can't inherit from classes with disabled NativeToManaged map");
             __Instance = Marshal.AllocHGlobal(sizeof(global::PlutoNET.LuaL_Stream.__Internal));
             __ownsNativeInstance = true;
+            __RecordNativeToManagedMapping(__Instance, this);
         }
 
         public LuaL_Stream(global::PlutoNET.LuaL_Stream _0)
         {
-            if (GetType().FullName != "PlutoNET.LuaL_Stream")
-                throw new Exception("PlutoNET.LuaL_Stream: Can't inherit from classes with disabled NativeToManaged map");
             __Instance = Marshal.AllocHGlobal(sizeof(global::PlutoNET.LuaL_Stream.__Internal));
             __ownsNativeInstance = true;
+            __RecordNativeToManagedMapping(__Instance, this);
             *((global::PlutoNET.LuaL_Stream.__Internal*) __Instance) = *((global::PlutoNET.LuaL_Stream.__Internal*) _0.__Instance);
         }
 
@@ -2173,6 +2336,7 @@ namespace PlutoNET
         {
             if (__Instance == IntPtr.Zero)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, out _);
             DisposePartial(disposing);
             if (__ownsNativeInstance)
                 Marshal.FreeHGlobal(__Instance);
@@ -2694,6 +2858,21 @@ namespace PlutoNET
 
             public __IntPtr __Instance { get; protected set; }
 
+            internal static readonly new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::PlutoNET.Pluto.PreloadedLibrary>> NativeToManagedMap =
+                new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::PlutoNET.Pluto.PreloadedLibrary>>();
+
+            internal static void __RecordNativeToManagedMapping(IntPtr native, global::PlutoNET.Pluto.PreloadedLibrary managed)
+            {
+                NativeToManagedMap[native] = new global::System.WeakReference<global::PlutoNET.Pluto.PreloadedLibrary>(managed);
+            }
+
+            internal static bool __TryGetNativeToManagedMapping(IntPtr native, out global::PlutoNET.Pluto.PreloadedLibrary managed)
+            {
+    
+                managed = default;
+                return NativeToManagedMap.TryGetValue(native, out var wr) && wr.TryGetTarget(out managed);
+            }
+
             private bool __name_OwnsNativeMemory = false;
             protected bool __ownsNativeInstance;
 
@@ -2702,6 +2881,18 @@ namespace PlutoNET
                 if (native == __IntPtr.Zero)
                     return null;
                 return new PreloadedLibrary(native.ToPointer(), skipVTables);
+            }
+
+            internal static PreloadedLibrary __GetOrCreateInstance(__IntPtr native, bool saveInstance = false, bool skipVTables = false)
+            {
+                if (native == __IntPtr.Zero)
+                    return null;
+                if (__TryGetNativeToManagedMapping(native, out var managed))
+                    return (PreloadedLibrary)managed;
+                var result = __CreateInstance(native, skipVTables);
+                if (saveInstance)
+                    __RecordNativeToManagedMapping(native, result);
+                return result;
             }
 
             internal static PreloadedLibrary __CreateInstance(__Internal native, bool skipVTables = false)
@@ -2720,6 +2911,7 @@ namespace PlutoNET
                 : this(__CopyValue(native), skipVTables)
             {
                 __ownsNativeInstance = true;
+                __RecordNativeToManagedMapping(__Instance, this);
             }
 
             protected PreloadedLibrary(void* native, bool skipVTables = false)
@@ -2731,10 +2923,9 @@ namespace PlutoNET
 
             public PreloadedLibrary(string name, global::PlutoNET.LuaL_Reg funcs, global::PlutoNET.LuaCFunction init)
             {
-                if (GetType().FullName != "PlutoNET.Pluto.PreloadedLibrary")
-                    throw new Exception("PlutoNET.Pluto.PreloadedLibrary: Can't inherit from classes with disabled NativeToManaged map");
                 __Instance = Marshal.AllocHGlobal(sizeof(global::PlutoNET.Pluto.PreloadedLibrary.__Internal));
                 __ownsNativeInstance = true;
+                __RecordNativeToManagedMapping(__Instance, this);
                 var __arg1 = funcs is null ? __IntPtr.Zero : funcs.__Instance;
                 var __arg2 = init == null ? global::System.IntPtr.Zero : Marshal.GetFunctionPointerForDelegate(init);
                 __Internal.ctor(__Instance, name, __arg1, __arg2);
@@ -2742,10 +2933,9 @@ namespace PlutoNET
 
             public PreloadedLibrary(global::PlutoNET.Pluto.PreloadedLibrary _0)
             {
-                if (GetType().FullName != "PlutoNET.Pluto.PreloadedLibrary")
-                    throw new Exception("PlutoNET.Pluto.PreloadedLibrary: Can't inherit from classes with disabled NativeToManaged map");
                 __Instance = Marshal.AllocHGlobal(sizeof(global::PlutoNET.Pluto.PreloadedLibrary.__Internal));
                 __ownsNativeInstance = true;
+                __RecordNativeToManagedMapping(__Instance, this);
                 *((global::PlutoNET.Pluto.PreloadedLibrary.__Internal*) __Instance) = *((global::PlutoNET.Pluto.PreloadedLibrary.__Internal*) _0.__Instance);
                 if (_0.__name_OwnsNativeMemory)
                     this.Name = _0.Name;
@@ -2768,6 +2958,7 @@ namespace PlutoNET
             {
                 if (__Instance == IntPtr.Zero)
                     return;
+                NativeToManagedMap.TryRemove(__Instance, out _);
                 DisposePartial(disposing);
                 if (__name_OwnsNativeMemory)
                     Marshal.FreeHGlobal(((__Internal*)__Instance)->name);
@@ -2805,7 +2996,7 @@ namespace PlutoNET
             {
                 get
                 {
-                    var __result0 = global::PlutoNET.LuaL_Reg.__CreateInstance(((__Internal*)__Instance)->funcs, false);
+                    var __result0 = global::PlutoNET.LuaL_Reg.__GetOrCreateInstance(((__Internal*)__Instance)->funcs, false);
                     return __result0;
                 }
             }

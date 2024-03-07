@@ -1,6 +1,7 @@
 ﻿using CppSharp;
 using CppSharp.Generators;
 using CppSharp.Generators.Cpp;
+using CppSharp.Parser;
 using CppSharp.Passes;
 using ASTContext = CppSharp.AST.ASTContext;
 
@@ -13,6 +14,9 @@ public class CodeGen : ILibrary
     public void Setup(Driver driver)
     {
         var path = Path.Combine(Directory.GetCurrentDirectory(), "vendor", "lua", "include");
+
+        driver.ParserOptions.Verbose = true;
+        driver.ParserOptions.LanguageVersion = LanguageVersion.CPP17;
 
         var options = driver.Options;
         options.GeneratorKind = GeneratorKind.CSharp;

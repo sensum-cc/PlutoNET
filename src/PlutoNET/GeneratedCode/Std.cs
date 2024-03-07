@@ -17,6 +17,105 @@ using __IntPtr = global::System.IntPtr;
 
 namespace Std
 {
+    namespace CharTraits
+    {
+        [StructLayout(LayoutKind.Sequential, Size = 1, Pack = 8)]
+        public unsafe partial struct __Internal
+        {
+        }
+    }
+
+    public unsafe partial class CharTraits<_Elem> : IDisposable
+    {
+        public __IntPtr __Instance { get; protected set; }
+
+        internal static readonly new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::Std.CharTraits<_Elem>>> NativeToManagedMap =
+            new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::Std.CharTraits<_Elem>>>();
+
+        internal static void __RecordNativeToManagedMapping(IntPtr native, global::Std.CharTraits<_Elem> managed)
+        {
+            NativeToManagedMap[native] = new global::System.WeakReference<global::Std.CharTraits<_Elem>>(managed);
+        }
+
+        internal static bool __TryGetNativeToManagedMapping(IntPtr native, out global::Std.CharTraits<_Elem> managed)
+        {
+    
+            managed = default;
+            return NativeToManagedMap.TryGetValue(native, out var wr) && wr.TryGetTarget(out managed);
+        }
+
+        protected bool __ownsNativeInstance;
+
+        internal static CharTraits<_Elem> __CreateInstance(__IntPtr native, bool skipVTables = false)
+        {
+            if (native == __IntPtr.Zero)
+                return null;
+            return new CharTraits<_Elem>(native.ToPointer(), skipVTables);
+        }
+
+        internal static CharTraits<_Elem> __GetOrCreateInstance(__IntPtr native, bool saveInstance = false, bool skipVTables = false)
+        {
+            if (native == __IntPtr.Zero)
+                return null;
+            if (__TryGetNativeToManagedMapping(native, out var managed))
+                return (CharTraits<_Elem>)managed;
+            var result = __CreateInstance(native, skipVTables);
+            if (saveInstance)
+                __RecordNativeToManagedMapping(native, result);
+            return result;
+        }
+
+        internal static CharTraits<_Elem> __CreateInstance(global::Std.CharTraits.__Internal native, bool skipVTables = false)
+        {
+            return new CharTraits<_Elem>(native, skipVTables);
+        }
+
+        private static void* __CopyValue(global::Std.CharTraits.__Internal native)
+        {
+            var ret = Marshal.AllocHGlobal(sizeof(global::Std.CharTraits.__Internal));
+            *(global::Std.CharTraits.__Internal*) ret = native;
+            return ret.ToPointer();
+        }
+
+        private CharTraits(global::Std.CharTraits.__Internal native, bool skipVTables = false)
+            : this(__CopyValue(native), skipVTables)
+        {
+            __ownsNativeInstance = true;
+            __RecordNativeToManagedMapping(__Instance, this);
+        }
+
+        protected CharTraits(void* native, bool skipVTables = false)
+        {
+            if (native == null)
+                return;
+            __Instance = new __IntPtr(native);
+        }
+
+        ~CharTraits()
+        {
+            Dispose(false, callNativeDtor : __ownsNativeInstance );
+        }
+
+        public void Dispose()
+        {
+            Dispose(disposing: true, callNativeDtor : __ownsNativeInstance );
+            GC.SuppressFinalize(this);
+        }
+
+        partial void DisposePartial(bool disposing);
+
+        internal protected virtual void Dispose(bool disposing, bool callNativeDtor )
+        {
+            if (__Instance == IntPtr.Zero)
+                return;
+            NativeToManagedMap.TryRemove(__Instance, out _);
+            DisposePartial(disposing);
+            if (__ownsNativeInstance)
+                Marshal.FreeHGlobal(__Instance);
+            __Instance = IntPtr.Zero;
+        }
+    }
+
     namespace BasicString
     {
         [StructLayout(LayoutKind.Sequential, Size = 32, Pack = 8)]
@@ -36,6 +135,21 @@ namespace Std
     {
         public __IntPtr __Instance { get; protected set; }
 
+        internal static readonly new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::Std.BasicString<_Elem, _Traits, _Alloc>>> NativeToManagedMap =
+            new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::Std.BasicString<_Elem, _Traits, _Alloc>>>();
+
+        internal static void __RecordNativeToManagedMapping(IntPtr native, global::Std.BasicString<_Elem, _Traits, _Alloc> managed)
+        {
+            NativeToManagedMap[native] = new global::System.WeakReference<global::Std.BasicString<_Elem, _Traits, _Alloc>>(managed);
+        }
+
+        internal static bool __TryGetNativeToManagedMapping(IntPtr native, out global::Std.BasicString<_Elem, _Traits, _Alloc> managed)
+        {
+    
+            managed = default;
+            return NativeToManagedMap.TryGetValue(native, out var wr) && wr.TryGetTarget(out managed);
+        }
+
         protected bool __ownsNativeInstance;
 
         internal static BasicString<_Elem, _Traits, _Alloc> __CreateInstance(__IntPtr native, bool skipVTables = false)
@@ -43,6 +157,18 @@ namespace Std
             if (native == __IntPtr.Zero)
                 return null;
             return new BasicString<_Elem, _Traits, _Alloc>(native.ToPointer(), skipVTables);
+        }
+
+        internal static BasicString<_Elem, _Traits, _Alloc> __GetOrCreateInstance(__IntPtr native, bool saveInstance = false, bool skipVTables = false)
+        {
+            if (native == __IntPtr.Zero)
+                return null;
+            if (__TryGetNativeToManagedMapping(native, out var managed))
+                return (BasicString<_Elem, _Traits, _Alloc>)managed;
+            var result = __CreateInstance(native, skipVTables);
+            if (saveInstance)
+                __RecordNativeToManagedMapping(native, result);
+            return result;
         }
 
         internal static BasicString<_Elem, _Traits, _Alloc> __CreateInstance(global::Std.BasicString.__Internalc__N_std_S_basic_string__C___N_std_S_char_traits__C___N_std_S_allocator__C native, bool skipVTables = false)
@@ -61,6 +187,7 @@ namespace Std
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
+            __RecordNativeToManagedMapping(__Instance, this);
         }
 
         protected BasicString(void* native, bool skipVTables = false)
@@ -77,10 +204,9 @@ namespace Std
             var ___Alloc = typeof(_Alloc);
             if (___Elem.IsAssignableFrom(typeof(sbyte)) && ___Traits.IsAssignableFrom(typeof(global::Std.CharTraits<sbyte>)) && ___Alloc.IsAssignableFrom(typeof(global::Std.Allocator<sbyte>)))
             {
-                if (GetType().FullName != "Std.BasicString")
-                    throw new Exception("Std.BasicString: Can't inherit from classes with disabled NativeToManaged map");
                 __Instance = Marshal.AllocHGlobal(sizeof(global::Std.BasicString.__Internalc__N_std_S_basic_string__C___N_std_S_char_traits__C___N_std_S_allocator__C));
                 __ownsNativeInstance = true;
+                __RecordNativeToManagedMapping(__Instance, this);
                 global::Std.BasicString.__Internalc__N_std_S_basic_string__C___N_std_S_char_traits__C___N_std_S_allocator__C.ctorc__N_std_S_basic_string__C___N_std_S_char_traits__C___N_std_S_allocator__C(__Instance);
                 return;
             }
@@ -104,6 +230,7 @@ namespace Std
         {
             if (__Instance == IntPtr.Zero)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, out _);
             DisposePartial(disposing);
             if (callNativeDtor)
             {
@@ -151,76 +278,6 @@ namespace Std
 
     }
 
-    namespace CharTraits
-    {
-        [StructLayout(LayoutKind.Sequential, Size = 1, Pack = 8)]
-        public unsafe partial struct __Internal
-        {
-        }
-    }
-
-    public unsafe partial class CharTraits<_Elem> : IDisposable
-    {
-        public __IntPtr __Instance { get; protected set; }
-
-        protected bool __ownsNativeInstance;
-
-        internal static CharTraits<_Elem> __CreateInstance(__IntPtr native, bool skipVTables = false)
-        {
-            if (native == __IntPtr.Zero)
-                return null;
-            return new CharTraits<_Elem>(native.ToPointer(), skipVTables);
-        }
-
-        internal static CharTraits<_Elem> __CreateInstance(global::Std.CharTraits.__Internal native, bool skipVTables = false)
-        {
-            return new CharTraits<_Elem>(native, skipVTables);
-        }
-
-        private static void* __CopyValue(global::Std.CharTraits.__Internal native)
-        {
-            var ret = Marshal.AllocHGlobal(sizeof(global::Std.CharTraits.__Internal));
-            *(global::Std.CharTraits.__Internal*) ret = native;
-            return ret.ToPointer();
-        }
-
-        private CharTraits(global::Std.CharTraits.__Internal native, bool skipVTables = false)
-            : this(__CopyValue(native), skipVTables)
-        {
-            __ownsNativeInstance = true;
-        }
-
-        protected CharTraits(void* native, bool skipVTables = false)
-        {
-            if (native == null)
-                return;
-            __Instance = new __IntPtr(native);
-        }
-
-        ~CharTraits()
-        {
-            Dispose(false, callNativeDtor : __ownsNativeInstance );
-        }
-
-        public void Dispose()
-        {
-            Dispose(disposing: true, callNativeDtor : __ownsNativeInstance );
-            GC.SuppressFinalize(this);
-        }
-
-        partial void DisposePartial(bool disposing);
-
-        internal protected virtual void Dispose(bool disposing, bool callNativeDtor )
-        {
-            if (__Instance == IntPtr.Zero)
-                return;
-            DisposePartial(disposing);
-            if (__ownsNativeInstance)
-                Marshal.FreeHGlobal(__Instance);
-            __Instance = IntPtr.Zero;
-        }
-    }
-
     public unsafe static partial class BasicStringExtensions
     {
         public partial struct __Internal
@@ -236,7 +293,7 @@ namespace Std
         {
             var __arg0 = @this is null ? __IntPtr.Zero : @this.__Instance;
             var ___ret = __Internal.Assign(__arg0, _Ptr);
-            var __result0 = global::Std.BasicString<sbyte, global::Std.CharTraits<sbyte>, global::Std.Allocator<sbyte>>.__CreateInstance(___ret, false);
+            var __result0 = global::Std.BasicString<sbyte, global::Std.CharTraits<sbyte>, global::Std.Allocator<sbyte>>.__GetOrCreateInstance(___ret, false);
             return __result0;
         }
 
@@ -274,6 +331,21 @@ namespace Std
     {
         public __IntPtr __Instance { get; protected set; }
 
+        internal static readonly new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::Std.Allocator<_Ty>>> NativeToManagedMap =
+            new global::System.Collections.Concurrent.ConcurrentDictionary<IntPtr, global::System.WeakReference<global::Std.Allocator<_Ty>>>();
+
+        internal static void __RecordNativeToManagedMapping(IntPtr native, global::Std.Allocator<_Ty> managed)
+        {
+            NativeToManagedMap[native] = new global::System.WeakReference<global::Std.Allocator<_Ty>>(managed);
+        }
+
+        internal static bool __TryGetNativeToManagedMapping(IntPtr native, out global::Std.Allocator<_Ty> managed)
+        {
+    
+            managed = default;
+            return NativeToManagedMap.TryGetValue(native, out var wr) && wr.TryGetTarget(out managed);
+        }
+
         protected bool __ownsNativeInstance;
 
         internal static Allocator<_Ty> __CreateInstance(__IntPtr native, bool skipVTables = false)
@@ -281,6 +353,18 @@ namespace Std
             if (native == __IntPtr.Zero)
                 return null;
             return new Allocator<_Ty>(native.ToPointer(), skipVTables);
+        }
+
+        internal static Allocator<_Ty> __GetOrCreateInstance(__IntPtr native, bool saveInstance = false, bool skipVTables = false)
+        {
+            if (native == __IntPtr.Zero)
+                return null;
+            if (__TryGetNativeToManagedMapping(native, out var managed))
+                return (Allocator<_Ty>)managed;
+            var result = __CreateInstance(native, skipVTables);
+            if (saveInstance)
+                __RecordNativeToManagedMapping(native, result);
+            return result;
         }
 
         internal static Allocator<_Ty> __CreateInstance(global::Std.Allocator.__Internal native, bool skipVTables = false)
@@ -299,6 +383,7 @@ namespace Std
             : this(__CopyValue(native), skipVTables)
         {
             __ownsNativeInstance = true;
+            __RecordNativeToManagedMapping(__Instance, this);
         }
 
         protected Allocator(void* native, bool skipVTables = false)
@@ -313,10 +398,9 @@ namespace Std
             var ___Ty = typeof(_Ty);
             if (___Ty.IsAssignableFrom(typeof(sbyte)))
             {
-                if (GetType().FullName != "Std.Allocator")
-                    throw new Exception("Std.Allocator: Can't inherit from classes with disabled NativeToManaged map");
                 __Instance = Marshal.AllocHGlobal(sizeof(global::Std.Allocator.__Internal));
                 __ownsNativeInstance = true;
+                __RecordNativeToManagedMapping(__Instance, this);
                 global::Std.Allocator.__Internal.ctorc__N_std_S_allocator__C(__Instance);
                 return;
             }
@@ -340,6 +424,7 @@ namespace Std
         {
             if (__Instance == IntPtr.Zero)
                 return;
+            NativeToManagedMap.TryRemove(__Instance, out _);
             DisposePartial(disposing);
             if (callNativeDtor)
             {
