@@ -1,4 +1,6 @@
-﻿using CppSharp;
+﻿using CodeGenerator.GeneratorOutputPasses;
+using CodeGenerator.TranslitionUnitPasses;
+using CppSharp;
 using CppSharp.Generators;
 using CppSharp.Generators.Cpp;
 using CppSharp.Parser;
@@ -52,6 +54,8 @@ public class CodeGen : ILibrary
         driver.Context.TranslationUnitPasses.AddPass(new DelegatesPass());
         driver.Context.TranslationUnitPasses.AddPass(new GenerateSymbolsPass());
         driver.Context.TranslationUnitPasses.AddPass(new FunctionToStaticMethodPass());
+        driver.Context.TranslationUnitPasses.AddPass(new MakeInternalAndExternPass());
+        driver.Context.GeneratorOutputPasses.AddPass(new RenameOutputClasses());
     }
     
     public void Preprocess(Driver driver, ASTContext ctx)

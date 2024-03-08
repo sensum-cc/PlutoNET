@@ -25,7 +25,7 @@ namespace Std
         }
     }
 
-    public unsafe partial class CharTraits<_Elem> : IDisposable
+    internal unsafe partial class CharTraits<_Elem> : IDisposable
     {
         public __IntPtr __Instance { get; protected set; }
 
@@ -119,7 +119,7 @@ namespace Std
     namespace BasicString
     {
         [StructLayout(LayoutKind.Sequential, Size = 32, Pack = 8)]
-        public unsafe partial struct __Internalc__N_std_S_basic_string__C___N_std_S_char_traits__C___N_std_S_allocator__C
+        internal unsafe partial struct __Internalc__N_std_S_basic_string__C___N_std_S_char_traits__C___N_std_S_allocator__C
         {
             internal global::Std.CompressedPair.__Internalc__N_std_S__Compressed_pair____N_std_S_allocator__C___N_std_S__String_val____N_std_S__Simple_types__C_Vb1 _Mypair;
 
@@ -131,7 +131,7 @@ namespace Std
         }
     }
 
-    public unsafe partial class BasicString<_Elem, _Traits, _Alloc> : IDisposable
+    internal unsafe partial class BasicString<_Elem, _Traits, _Alloc> : IDisposable
     {
         public __IntPtr __Instance { get; protected set; }
 
@@ -253,7 +253,7 @@ namespace Std
     namespace StringVal
     {
         [StructLayout(LayoutKind.Sequential, Size = 32, Pack = 8)]
-        public unsafe partial struct __Internal
+        internal unsafe partial struct __Internal
         {
             internal global::Std.StringVal.Bxty.__Internal _Bx;
             internal ulong _Mysize;
@@ -263,7 +263,7 @@ namespace Std
         namespace Bxty
         {
             [StructLayout(LayoutKind.Explicit, Size = 16, Pack = 8)]
-            public unsafe partial struct __Internal
+            internal unsafe partial struct __Internal
             {
                 [FieldOffset(0)]
                 internal fixed sbyte _Buf[16];
@@ -278,9 +278,9 @@ namespace Std
 
     }
 
-    public unsafe static partial class BasicStringExtensions
+    internal unsafe static partial class BasicStringExtensions
     {
-        public partial struct __Internal
+        internal partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity, DllImport("Std-symbols", EntryPoint = "?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV12@QEBD@Z", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr Assign(__IntPtr __instance, [MarshalAs(UnmanagedType.CustomMarshaler, MarshalTypeRef = typeof(CppSharp.Runtime.UTF8Marshaller))] string _Ptr);
@@ -311,7 +311,7 @@ namespace Std
     namespace CompressedPair
     {
         [StructLayout(LayoutKind.Sequential, Size = 32, Pack = 8)]
-        public unsafe partial struct __Internalc__N_std_S__Compressed_pair____N_std_S_allocator__C___N_std_S__String_val____N_std_S__Simple_types__C_Vb1
+        internal unsafe partial struct __Internalc__N_std_S__Compressed_pair____N_std_S_allocator__C___N_std_S__String_val____N_std_S__Simple_types__C_Vb1
         {
             internal global::Std.StringVal.__Internal _Myval2;
         }
@@ -320,14 +320,14 @@ namespace Std
     namespace Allocator
     {
         [StructLayout(LayoutKind.Sequential, Size = 1, Pack = 8)]
-        public unsafe partial struct __Internal
+        internal unsafe partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity, DllImport("Std-symbols", EntryPoint = "??0?$allocator@D@std@@QEAA@XZ", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr ctorc__N_std_S_allocator__C(__IntPtr __instance);
         }
     }
 
-    public unsafe partial class Allocator<_Ty> : IDisposable
+    internal unsafe partial class Allocator<_Ty> : IDisposable
     {
         public __IntPtr __Instance { get; protected set; }
 

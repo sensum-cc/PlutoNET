@@ -14,9 +14,9 @@ using __IntPtr = global::System.IntPtr;
 
 namespace PlutoNET
 {
-    public unsafe partial class lualib
+    internal unsafe partial class lualib
     {
-        public partial struct __Internal
+        internal partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaopen_base", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern int LuaopenBase(__IntPtr L);
@@ -138,13 +138,13 @@ namespace PlutoNET
 
     namespace Pluto
     {
-        public unsafe partial class lualib
+        internal unsafe partial class lualib
         {
             public partial struct __Internal
             {
             }
 
-            public static global::PlutoNET.Pluto.PreloadedLibrary PreloadedAssert
+            internal static global::PlutoNET.Pluto.PreloadedLibrary PreloadedAssert
             {
                 get
                 {
@@ -153,7 +153,7 @@ namespace PlutoNET
                 }
             }
 
-            public static global::PlutoNET.Pluto.PreloadedLibrary PreloadedVector3
+            internal static global::PlutoNET.Pluto.PreloadedLibrary PreloadedVector3
             {
                 get
                 {
@@ -187,7 +187,7 @@ namespace PlutoNET
     [SuppressUnmanagedCodeSecurity, UnmanagedFunctionPointer(__CallingConvention.Cdecl)]
     public unsafe delegate void LuaHook(__IntPtr L, __IntPtr ar);
 
-    public unsafe partial class LuaState
+    internal unsafe partial class LuaState
     {
         public partial struct __Internal
         {
@@ -258,10 +258,10 @@ namespace PlutoNET
         }
     }
 
-    public unsafe partial class LuaDebug : IDisposable
+    internal unsafe partial class LuaDebug : IDisposable
     {
         [StructLayout(LayoutKind.Sequential, Size = 136)]
-        public partial struct __Internal
+        internal partial struct __Internal
         {
             internal int @event;
             internal __IntPtr name;
@@ -408,7 +408,7 @@ namespace PlutoNET
             __Instance = IntPtr.Zero;
         }
 
-        public int Event
+        internal int Event
         {
             get
             {
@@ -421,7 +421,7 @@ namespace PlutoNET
             }
         }
 
-        public string Name
+        internal string Name
         {
             get
             {
@@ -446,7 +446,7 @@ namespace PlutoNET
             }
         }
 
-        public string Namewhat
+        internal string Namewhat
         {
             get
             {
@@ -471,7 +471,7 @@ namespace PlutoNET
             }
         }
 
-        public string What
+        internal string What
         {
             get
             {
@@ -496,7 +496,7 @@ namespace PlutoNET
             }
         }
 
-        public string Source
+        internal string Source
         {
             get
             {
@@ -521,7 +521,7 @@ namespace PlutoNET
             }
         }
 
-        public ulong Srclen
+        internal ulong Srclen
         {
             get
             {
@@ -534,7 +534,7 @@ namespace PlutoNET
             }
         }
 
-        public int Currentline
+        internal int Currentline
         {
             get
             {
@@ -547,7 +547,7 @@ namespace PlutoNET
             }
         }
 
-        public int Linedefined
+        internal int Linedefined
         {
             get
             {
@@ -560,7 +560,7 @@ namespace PlutoNET
             }
         }
 
-        public int Lastlinedefined
+        internal int Lastlinedefined
         {
             get
             {
@@ -573,7 +573,7 @@ namespace PlutoNET
             }
         }
 
-        public byte Nups
+        internal byte Nups
         {
             get
             {
@@ -586,7 +586,7 @@ namespace PlutoNET
             }
         }
 
-        public byte Nparams
+        internal byte Nparams
         {
             get
             {
@@ -599,7 +599,7 @@ namespace PlutoNET
             }
         }
 
-        public sbyte Isvararg
+        internal sbyte Isvararg
         {
             get
             {
@@ -612,7 +612,7 @@ namespace PlutoNET
             }
         }
 
-        public sbyte Istailcall
+        internal sbyte Istailcall
         {
             get
             {
@@ -625,7 +625,7 @@ namespace PlutoNET
             }
         }
 
-        public ushort Ftransfer
+        internal ushort Ftransfer
         {
             get
             {
@@ -638,7 +638,7 @@ namespace PlutoNET
             }
         }
 
-        public ushort Ntransfer
+        internal ushort Ntransfer
         {
             get
             {
@@ -651,7 +651,7 @@ namespace PlutoNET
             }
         }
 
-        public sbyte[] ShortSrc
+        internal sbyte[] ShortSrc
         {
             get
             {
@@ -668,7 +668,7 @@ namespace PlutoNET
             }
         }
 
-        public global::PlutoNET.CallInfo ICi
+        internal global::PlutoNET.CallInfo ICi
         {
             get
             {
@@ -683,7 +683,7 @@ namespace PlutoNET
         }
     }
 
-    public unsafe partial class CallInfo
+    internal unsafe partial class CallInfo
     {
         public partial struct __Internal
         {
@@ -754,9 +754,9 @@ namespace PlutoNET
         }
     }
 
-    public unsafe partial class lua
+    internal unsafe partial class lua
     {
-        public partial struct __Internal
+        internal partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "lua_newstate", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern __IntPtr LuaNewstate(__IntPtr f, __IntPtr ud);
@@ -1723,7 +1723,7 @@ namespace PlutoNET
             return ___ret;
         }
 
-        public static string LuaIdent
+        internal static string LuaIdent
         {
             get
             {
@@ -1733,10 +1733,10 @@ namespace PlutoNET
         }
     }
 
-    public unsafe partial class LuaL_Reg : IDisposable
+    internal unsafe partial class LuaL_Reg : IDisposable
     {
         [StructLayout(LayoutKind.Sequential, Size = 16)]
-        public partial struct __Internal
+        internal partial struct __Internal
         {
             internal __IntPtr name;
             internal __IntPtr func;
@@ -1853,7 +1853,7 @@ namespace PlutoNET
             __Instance = IntPtr.Zero;
         }
 
-        public string Name
+        internal string Name
         {
             get
             {
@@ -1878,7 +1878,7 @@ namespace PlutoNET
             }
         }
 
-        public global::PlutoNET.LuaCFunction Func
+        internal global::PlutoNET.LuaCFunction Func
         {
             get
             {
@@ -1893,10 +1893,10 @@ namespace PlutoNET
         }
     }
 
-    public unsafe partial class LuaL_Buffer : IDisposable
+    internal unsafe partial class LuaL_Buffer : IDisposable
     {
         [StructLayout(LayoutKind.Sequential, Size = 1056)]
-        public partial struct __Internal
+        internal partial struct __Internal
         {
             internal __IntPtr b;
             internal ulong size;
@@ -1908,10 +1908,10 @@ namespace PlutoNET
             internal static extern __IntPtr cctor(__IntPtr __instance, __IntPtr _0);
         }
 
-        public unsafe partial struct Init
+        internal unsafe partial struct Init
         {
             [StructLayout(LayoutKind.Explicit, Size = 1024)]
-            public partial struct __Internal
+            internal partial struct __Internal
             {
                 [FieldOffset(0)]
                 internal double n;
@@ -1970,7 +1970,7 @@ namespace PlutoNET
                 }
             }
 
-            public double N
+            internal double N
             {
                 get
                 {
@@ -1983,7 +1983,7 @@ namespace PlutoNET
                 }
             }
 
-            public double U
+            internal double U
             {
                 get
                 {
@@ -1996,7 +1996,7 @@ namespace PlutoNET
                 }
             }
 
-            public __IntPtr S
+            internal __IntPtr S
             {
                 get
                 {
@@ -2009,7 +2009,7 @@ namespace PlutoNET
                 }
             }
 
-            public long I
+            internal long I
             {
                 get
                 {
@@ -2022,7 +2022,7 @@ namespace PlutoNET
                 }
             }
 
-            public int L
+            internal int L
             {
                 get
                 {
@@ -2035,7 +2035,7 @@ namespace PlutoNET
                 }
             }
 
-            public sbyte[] B
+            internal sbyte[] B
             {
                 get
                 {
@@ -2162,7 +2162,7 @@ namespace PlutoNET
             __Instance = IntPtr.Zero;
         }
 
-        public sbyte* B
+        internal sbyte* B
         {
             get
             {
@@ -2175,7 +2175,7 @@ namespace PlutoNET
             }
         }
 
-        public ulong Size
+        internal ulong Size
         {
             get
             {
@@ -2188,7 +2188,7 @@ namespace PlutoNET
             }
         }
 
-        public ulong N
+        internal ulong N
         {
             get
             {
@@ -2201,7 +2201,7 @@ namespace PlutoNET
             }
         }
 
-        public IntPtr L
+        internal IntPtr L
         {
             get
             {
@@ -2214,7 +2214,7 @@ namespace PlutoNET
             }
         }
 
-        public global::PlutoNET.LuaL_Buffer.Init init
+        internal global::PlutoNET.LuaL_Buffer.Init init
         {
             get
             {
@@ -2228,10 +2228,10 @@ namespace PlutoNET
         }
     }
 
-    public unsafe partial class LuaL_Stream : IDisposable
+    internal unsafe partial class LuaL_Stream : IDisposable
     {
         [StructLayout(LayoutKind.Sequential, Size = 16)]
-        public partial struct __Internal
+        internal partial struct __Internal
         {
             internal __IntPtr f;
             internal __IntPtr closef;
@@ -2343,7 +2343,7 @@ namespace PlutoNET
             __Instance = IntPtr.Zero;
         }
 
-        public global::System.IntPtr F
+        internal global::System.IntPtr F
         {
             get
             {
@@ -2356,7 +2356,7 @@ namespace PlutoNET
             }
         }
 
-        public global::PlutoNET.LuaCFunction Closef
+        internal global::PlutoNET.LuaCFunction Closef
         {
             get
             {
@@ -2371,9 +2371,9 @@ namespace PlutoNET
         }
     }
 
-    public unsafe partial class lauxlib
+    internal unsafe partial class lauxlib
     {
-        public partial struct __Internal
+        internal partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity, DllImport("lua54", EntryPoint = "luaL_checkversion_", CallingConvention = __CallingConvention.Cdecl)]
             internal static extern void LuaL_checkversion(__IntPtr L, double ver, ulong sz);
@@ -2840,10 +2840,10 @@ namespace PlutoNET
 
     namespace Pluto
     {
-        public unsafe partial class PreloadedLibrary : IDisposable
+        internal unsafe partial class PreloadedLibrary : IDisposable
         {
             [StructLayout(LayoutKind.Sequential, Size = 24)]
-            public partial struct __Internal
+            internal partial struct __Internal
             {
                 internal __IntPtr name;
                 internal __IntPtr funcs;
@@ -2967,7 +2967,7 @@ namespace PlutoNET
                 __Instance = IntPtr.Zero;
             }
 
-            public string Name
+            internal string Name
             {
                 get
                 {
@@ -2992,7 +2992,7 @@ namespace PlutoNET
                 }
             }
 
-            public global::PlutoNET.LuaL_Reg Funcs
+            internal global::PlutoNET.LuaL_Reg Funcs
             {
                 get
                 {
@@ -3001,7 +3001,7 @@ namespace PlutoNET
                 }
             }
 
-            public global::PlutoNET.LuaCFunction Init
+            internal global::PlutoNET.LuaCFunction Init
             {
                 get
                 {
