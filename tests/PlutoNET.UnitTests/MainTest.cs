@@ -15,7 +15,7 @@ public class MainTest
     [Test]
     public void StateCheck()
     {
-        Assert.That(_lua.State, Is.Not.EqualTo(IntPtr.Zero));
+        Assert.That(_lua.L, Is.Not.EqualTo(IntPtr.Zero));
     }
 
     [Test]
