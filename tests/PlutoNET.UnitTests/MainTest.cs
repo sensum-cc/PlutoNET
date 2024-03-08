@@ -9,11 +9,18 @@ public class MainTest
     {
         ResourceManager.ExtractEmbedded(); // Extracts embedded resources to the current directory in this case lua libraries
         _lua = new Lua();
+        _lua.OpenLibs();
     }
 
     [Test]
     public void StateCheck()
     {
         Assert.That(_lua.State, Is.Not.EqualTo(IntPtr.Zero));
+    }
+
+    [Test]
+    public void DoString()
+    {
+        Assert.That(_lua.DoString("print('Hello World')"), Is.False);
     }
 }

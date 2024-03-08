@@ -1,7 +1,9 @@
 ﻿using System.Runtime.CompilerServices;
+using PlutoNET.Enums;
 using static PlutoNET.lauxlib;
 using static PlutoNET.lua;
 using static PlutoNET.lualib;
+using LuaStatus = PlutoNET.Enums.LuaStatus;
 using LuaType = PlutoNET.Enums.LuaType;
 
 namespace PlutoNET;
@@ -30,6 +32,12 @@ public class Lua : IDisposable
     /// Opens all standard Lua libraries into the given state.
     /// </summary>
     public void OpenLibs() => LuaL_openlibs(State);
+
+    public LuaStatus LoadString(string str) => (LuaStatus)LuaL_loadstring(State, str);
+
+    public bool DoString(string str) => LoadString(str) != LuaStatus.Ok || PCall(0, -1, 0) != LuaStatus.Ok;
+
+    public LuaStatus PCall(int args, int results, int errorFunctionIndex)  => (LuaStatus)LuaPcallk(State, args, results, 0, errorFunctionIndex, null);
     
     public void Call(int args, int results) => LuaCallk(State, args, results, 0, null);
     public void CallK(int args, int results, long ctx, LuaKFunction k) => LuaCallk(State, args, results, ctx, k);
