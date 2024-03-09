@@ -2,6 +2,7 @@
 
 public class MainTest
 {
+    // ReSharper disable once NullableWarningSuppressionIsUsed
     private Lua _lua = null!;
     
     [SetUp]
