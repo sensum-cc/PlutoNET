@@ -150,8 +150,29 @@ public class Lua(IntPtr l) : IDisposable
     /// <returns>The index of the top element in the Lua stack.</returns>
     public int GetTop() => LuaGettop(L);
 
+    public LuaType GetGlobal(string key) => (LuaType)LuaGetglobal(L, key);
+
 
     /* ---------------------------------------- */
+
+    /// <summary>
+    /// Converts a Lua value at the given index to a string.
+    /// </summary>
+    /// <param name="index">The index in the Lua stack.</param>
+    /// <param name="len">The length of the string. This is an output parameter.</param>
+    /// <returns>The string representation of the Lua value at the given index.</returns>
+    public string ToString(int index, ref ulong len) => LuaL_tolstring(L, index, ref len);
+
+    /// <summary>
+    /// Converts a Lua value at the given index to a string.
+    /// </summary>
+    /// <param name="index">The index in the Lua stack.</param>
+    /// <returns>The string representation of the Lua value at the given index.</returns>
+    public string ToString(int index)
+    {
+        ulong len = default;
+        return ToString(index, ref len);
+    }
 
     /// <summary>
     /// Converts the Lua value at the given acceptable index to a boolean.
